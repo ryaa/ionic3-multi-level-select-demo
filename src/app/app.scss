@@ -1,0 +1,141 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+/* multi-level-select-control container */
+.multi-level-select-control-container {
+    width: 100%;
+  }
+  
+  /* ionic3-multi-level-select control styling */
+  ryaa-multi-level-select {
+    ion-toolbar {
+      min-height: 34px !important;
+  
+      .toolbar-background {
+        background: #fcfcfc;
+        border: 1px solid #f4f4f4;
+      }
+  
+      ion-title {
+        &.title-ios {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+  
+        .toolbar-title {
+          font: 400 15px;
+          color: #373B40;
+  
+          &.toolbar-title-ios {
+            text-align: left;
+            padding-left: 8px;
+          }
+        }
+      }
+  
+      ion-buttons {
+  
+        button {
+  
+          i {
+            &.fa.fa-times {
+              color: #ff5a5a;
+            }
+  
+            &.fa.fa-caret-down {
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  ryaa-multi-level-select-dialog {
+  
+    ion-content {
+      ion-slides {
+        .slide-zoom {
+          height: 100%;
+  
+          ion-list-header {
+            margin-bottom: 1px;
+            padding-left: 0;
+            background-color: $primary-color !important;
+            border-color: $primary-color !important;
+  
+            ion-label {
+              margin: 0 !important;
+  
+              ion-toolbar {
+  
+                .toolbar-background {
+                  background-color: $primary-color !important;
+                }
+  
+                ion-buttons {
+  
+                  button {
+                    color: $light-color;
+                  }
+                }
+  
+                ion-title {
+                  .toolbar-title {
+                    font-size: 18px;
+                    color: $light-color;
+                  }
+                }
+              }
+            }
+          }
+  
+          ion-list {
+            height: calc(100% - 59px);
+            overflow-y: scroll;
+  
+            ion-item {
+  
+              ion-label {
+                margin-top: 10px;
+                margin-bottom: 10px;
+              }
+  
+              /* stylelint-disable-next-line no-descending-specificity */
+              ion-icon {
+                font-size: 20px;
+                line-height: 30px;
+              }
+  
+              &.selected {
+                background-color: #eee !important;
+              }
+  
+              &.parent-item {
+                padding-left: 0px;
+  
+                .item-inner {
+                  padding-left: 16px;
+                  border-bottom: 1px solid #dedede !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
